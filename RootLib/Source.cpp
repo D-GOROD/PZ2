@@ -23,7 +23,7 @@ void print(std::list<QuadraticEquations> functionsCollections)
 			std::cout << "На интервале (" << F.getExtremum() << ", +inf) " << (F.getBranchStatus() ? "возрастает" : "убывает") << std::endl << std::endl;
 		}
 		else
-			std::cout << "Корней нет" << std::endl;
+			std::cout << "Корней нет" << std::endl << std::endl;
 	}
 }
 
@@ -41,14 +41,13 @@ void printMaxMinRoots(std::list<QuadraticEquations> functionsCollections)
 	std::cout << "\nМаксимальный корень - X = " << max << std::endl;
 }
 
-
 int main()
 {
 	std::list<QuadraticEquations> functionsCollections;
 	functionsCollections.push_back(QuadraticEquations(4, 7, -2));
 	functionsCollections.push_back(QuadraticEquations(-4, 7, -2));
-	functionsCollections.push_back(QuadraticEquations(1, -6, 9));
 	functionsCollections.push_back(QuadraticEquations(1, 4, 29));
+	functionsCollections.push_back(QuadraticEquations(1, -6, 9));
 	print(functionsCollections);
 	printMaxMinRoots(functionsCollections);
 }

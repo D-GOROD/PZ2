@@ -15,8 +15,7 @@ bool QuadraticEquations::getBranchStatus()
 	return br;
 }
 
-bool QuadraticEquations::getException
-()
+bool QuadraticEquations::getException()
 {
 	return exception;
 }
@@ -35,7 +34,6 @@ double QuadraticEquations::getC()
 {
 	return c;
 }
-
 
 QuadraticEquations::QuadraticEquations(double A, double B, double C)
 {
