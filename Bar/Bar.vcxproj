@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a32bd7b2-7353-4723-b9a2-d003a5c035e1}</ProjectGuid>
-    <RootNamespace>RootLib</RootNamespace>
+    <ProjectGuid>{44fa3c7a-f511-4bf4-a6de-9e3965bf351c}</ProjectGuid>
+    <RootNamespace>Bar</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="QuadraticEquations.cpp" />
-    <ClCompile Include="RootLib.cpp" />
+    <ClCompile Include="CAlcoholDrinkBase.cpp" />
+    <ClCompile Include="Bar.cpp" />
+    <ClCompile Include="CDrink.cpp" />
+    <ClCompile Include="CVodka.cpp" />
+    <ClCompile Include="CSoftDrink.cpp" />
+    <ClCompile Include="CJuice.cpp" />
+    <ClCompile Include="COtvertka.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="QuadraticEquations.h" />
+    <ClInclude Include="CAlcoholDrinkBase.h" />
+    <ClInclude Include="CDrink.h" />
+    <ClInclude Include="CVodka.h" />
+    <ClInclude Include="CSoftDrink.h" />
+    <ClInclude Include="CJuice.h" />
+    <ClInclude Include="COtvertka.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

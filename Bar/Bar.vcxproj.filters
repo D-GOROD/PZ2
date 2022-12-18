@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AlcoholDrink">
+      <UniqueIdentifier>{27a2c204-dd38-4bbe-969f-a941f7a718ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SoftDrink">
+      <UniqueIdentifier>{a27822a8-c3ed-4f29-8532-14da60ef661b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cocktail">
+      <UniqueIdentifier>{fd7aa622-69e2-4cd2-ba91-fbeba6b69d55}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bar.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CDrink.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CAlcoholDrinkBase.cpp">
+      <Filter>AlcoholDrink</Filter>
+    </ClCompile>
+    <ClCompile Include="CVodka.cpp">
+      <Filter>AlcoholDrink</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoftDrink.cpp">
+      <Filter>SoftDrink</Filter>
+    </ClCompile>
+    <ClCompile Include="CJuice.cpp">
+      <Filter>SoftDrink</Filter>
+    </ClCompile>
+    <ClCompile Include="COtvertka.cpp">
+      <Filter>Cocktail</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CDrink.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="CAlcoholDrinkBase.h">
+      <Filter>AlcoholDrink</Filter>
+    </ClInclude>
+    <ClInclude Include="CVodka.h">
+      <Filter>AlcoholDrink</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoftDrink.h">
+      <Filter>SoftDrink</Filter>
+    </ClInclude>
+    <ClInclude Include="CJuice.h">
+      <Filter>SoftDrink</Filter>
+    </ClInclude>
+    <ClInclude Include="COtvertka.h">
+      <Filter>Cocktail</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
