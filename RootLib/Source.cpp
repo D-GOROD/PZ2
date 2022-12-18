@@ -1,38 +1,54 @@
 #include <iostream>
 #include <list>
+#include <algorithm>
 #include "QuadraticEquations.h"
 
-void Print(QuadraticEquations F)
+void print(std::list<QuadraticEquations> functionsCollections)
 {
-	if (!F.GetException())
-	{
-		std::list<double> roots;
-		roots = F.GetRoot();
-		int i = 1;
-		for (double x : roots)
+	for (QuadraticEquations F : functionsCollections) {
+		std::cout << F.getA() << "*x^2 " << (F.getB() > 0 ? "+":"") << F.getB() << "*x " << (F.getC() > 0 ? "+" : "") << F.getC() << " = 0" << std::endl;
+		if (!F.getException())
 		{
-			std::cout << "X" << i << " = " << x << std::endl;
-			i++;
+			std::list<double> roots;
+			roots = F.getRoot();
+			int i = 1;
+			for (double x : roots)
+			{
+				std::cout << "X" << i << " = " << x << std::endl;
+				i++;
+			}
+			std::cout << "E = " << F.getExtremum() << std::endl;
+			std::cout << "Ветви параболы " << (F.getBranchStatus() ? "вверх" : "вниз") << std::endl;
+			std::cout << "На интервале (-inf, " << F.getExtremum() << ") " << (F.getBranchStatus() ? "убывает" : "возрастает") << std::endl;
+			std::cout << "На интервале (" << F.getExtremum() << ", +inf) " << (F.getBranchStatus() ? "возрастает" : "убывает") << std::endl << std::endl;
 		}
-		std::cout << "E = " << F.GetExtremum() << std::endl;
-		std::cout << "Ветви параболы " << (F.GetBranchStatus() ? "вверх" : "вниз") << std::endl;
-		std::cout << "На интервале (-inf, " << F.GetExtremum() << ") " << (F.GetBranchStatus() ? "убывает" : "возрастает") << std::endl;
-		std::cout << "На интервале (" << F.GetExtremum() << ", +inf) " << (F.GetBranchStatus() ? "возрастает" : "убывает") << std::endl << std::endl;
+		else
+			std::cout << "Корней нет" << std::endl;
 	}
-	else
-		std::cout << "Корней нет"<< std::endl;
+}
+
+void printMaxMinRoots(std::list<QuadraticEquations> functionsCollections)
+{
+	std::list<double> roots;
+	for (QuadraticEquations F : functionsCollections)
+	{
+		auto iter = F.getRoot();
+		roots.insert(roots.cbegin(), iter.begin(), iter.end());
+	}
+	auto max = *std::max_element(roots.begin(), roots.end());
+	auto min = *std::min_element(roots.begin(), roots.end());
+	std::cout << "\nМинимальный корень - X = " << min << std::endl;
+	std::cout << "\nМаксимальный корень - X = " << max << std::endl;
 }
 
 
 int main()
 {
-	QuadraticEquations F1(4, 7, -2);
-	QuadraticEquations F2(-4, 7, -2);
-	QuadraticEquations F3(1, -6, 9);
-	QuadraticEquations F4(1, 4, 29);
-	Print(F1);
-	Print(F2);
-	Print(F3);
-	Print(F4);
-
+	std::list<QuadraticEquations> functionsCollections;
+	functionsCollections.push_back(QuadraticEquations(4, 7, -2));
+	functionsCollections.push_back(QuadraticEquations(-4, 7, -2));
+	functionsCollections.push_back(QuadraticEquations(1, -6, 9));
+	functionsCollections.push_back(QuadraticEquations(1, 4, 29));
+	print(functionsCollections);
+	printMaxMinRoots(functionsCollections);
 }

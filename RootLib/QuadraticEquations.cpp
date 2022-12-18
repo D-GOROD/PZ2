@@ -1,36 +1,37 @@
 #include "QuadraticEquations.h"
 
-std::list<double> QuadraticEquations::GetRoot()
+std::list<double> QuadraticEquations::getRoot()
 {
 	return roots;
 }
 
-double QuadraticEquations::GetExtremum()
+double QuadraticEquations::getExtremum()
 {
 	return E;
 }
 
-bool QuadraticEquations::GetBranchStatus()
+bool QuadraticEquations::getBranchStatus()
 {
 	return br;
 }
 
-bool QuadraticEquations::GetException()
+bool QuadraticEquations::getException
+()
 {
 	return exception;
 }
 
-double QuadraticEquations::GetA()
+double QuadraticEquations::getA()
 {
 	return a;
 }
 
-double QuadraticEquations::GetB()
+double QuadraticEquations::getB()
 {
 	return b;
 }
 
-double QuadraticEquations::GetC()
+double QuadraticEquations::getC()
 {
 	return c;
 }

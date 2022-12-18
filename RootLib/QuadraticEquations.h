@@ -4,14 +4,14 @@
 class QuadraticEquations
 {
 public:
-	std::list<double> GetRoot();
-	double GetExtremum();
-	bool GetBranchStatus();
-	bool GetException();
-	double GetA();
-	double GetB();
-	double GetC();
 	QuadraticEquations(double A, double B, double C);
+	std::list<double> getRoot();
+	double getExtremum();
+	bool getBranchStatus();
+	bool getException();
+	double getA();
+	double getB();
+	double getC();
 private:
 	double a, b, c; // a * x^2 + b * x + c = 0
 	double D; // discriminant
